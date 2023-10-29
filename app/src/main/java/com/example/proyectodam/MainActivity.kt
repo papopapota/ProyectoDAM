@@ -12,5 +12,6 @@ class MainActivity : AppCompatActivity() {
         //Chau Daniel -> UwU
         //holi que hace
         // chau
+        //Soy kbro
     }
 }
