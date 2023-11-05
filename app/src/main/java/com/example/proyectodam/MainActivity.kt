@@ -14,5 +14,6 @@ class MainActivity : AppCompatActivity() {
         // chau
         //Soy kbro
         //Se nota
+        //Hi
     }
 }
