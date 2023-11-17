@@ -72,7 +72,8 @@ lorem impsulorem impsulorem "
         android:shadowDy="10"
         android:text="lorem impsu lorem impsulorem
 lorem impsulorem impsulorem
-lorem impsulorem impsulorem "
+lorem impsulorem impsulorem
+loren impsulores "
         app:layout_constraintBottom_toTopOf="@+id/bottomAppBar"
         app:layout_constraintEnd_toEndOf="@+id/imageView3"
         app:layout_constraintHorizontal_bias="1.0"
