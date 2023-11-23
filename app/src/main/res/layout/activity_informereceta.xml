@@ -53,7 +53,7 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="131dp"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@drawable/tallarin_rojo" />
 
     <TextView
         android:id="@+id/textView3"
