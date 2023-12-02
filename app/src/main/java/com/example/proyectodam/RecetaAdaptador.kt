@@ -39,7 +39,7 @@ class RecetaAdaptador (
             recetas.add(receta)
             notifyDataSetChanged()
         }
-        fun setRecetas(recetas: MutableList<Receta>){
+        fun setReceta(recetas: MutableList<Receta>){
             this.recetas = recetas
             notifyDataSetChanged()
         }

@@ -11,6 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="409dp"
         android:layout_height="62dp"
+        android:layout_marginBottom="100dp"
         android:background="@color/gris_nav"
         android:fontFamily="casual"
         android:gravity=""
@@ -22,6 +23,46 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="532dp"
+        android:ems="10"
+        android:hint="Descripcion:"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="0dp"
@@ -30,9 +71,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion"
         tools:listitem="@layout/cv_receta"></androidx.recyclerview.widget.RecyclerView>
-
 
 
     <com.google.android.material.bottomappbar.BottomAppBar

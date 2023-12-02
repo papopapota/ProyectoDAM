@@ -1,14 +1,15 @@
 package com.example.proyectodam
+import android.app.Application
 import androidx.room.Room
-class RecetaApplication {
+class RecetaApplication: Application(){
 
     companion object{
         lateinit var database: RecetaDatabase
     }
     override fun onCreate(){
         super.onCreate()
-        database = Room.databaseBuilder(this,
+        database = Room.databaseBuilder(  this,
             RecetaDatabase::class.java,
-            "recetaDatabase").build()
+                                "RecetaDatabase").build()
     }
 }
