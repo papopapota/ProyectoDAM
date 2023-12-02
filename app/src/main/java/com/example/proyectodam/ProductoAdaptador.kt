@@ -25,8 +25,8 @@ class ProductoAdaptador(private var productos: MutableList<Producto>,
 
         with(holder) {
             setListener(producto)
-            binding.tvName.text = producto.name
-            binding.tvPrecio.text = producto.price.toString()
+            //binding.tvName.text = producto.name
+            //binding.tvPrecio.text = producto.price.toString()
         }
     }
 
