@@ -13,15 +13,17 @@ class MainActivity : AppCompatActivity() {
     private lateinit var mFragmetManager: FragmentManager
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(mBinding.root)
+
         setContentView(R.layout.activity_main)
 
-   mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mBinding.root)
-setupBoottomNavigation()
+
+setupBottomNavigation()
 
     }
 
-    private fun setupBoottomNavigation(){
+    private fun setupBottomNavigation(){
         val fragmentManager = supportFragmentManager
         val homeFragment = HomeFragment()
         val perfil=Perfil()
@@ -41,7 +43,7 @@ setupBoottomNavigation()
         fragmentManager.beginTransaction()
             .add(R.id.hostFragment, exit,Exit::class.java.name).hide(exit).commit()
 
-        mBinding.bottomNavegation.setOnNavigationItemReselectedListener {
+        mBinding.bottomNavegation {
             when(it.itemId){
                 R.id.action_profile -> {
                     mFragmetManager.beginTransaction().hide(mActiveFragment).show(perfil).commit()
