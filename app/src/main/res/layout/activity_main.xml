@@ -11,17 +11,18 @@
         android:id="@+id/textView"
         android:layout_width="409dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="100dp"
         android:background="@color/gris_nav"
         android:fontFamily="casual"
         android:gravity=""
         android:text="Refri Movil"
         android:textColor="@color/white"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
         android:id="@+id/etNombre"
@@ -42,15 +43,16 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginTop="154dp"
-        android:layout_marginEnd="154dp"
         android:layout_marginBottom="532dp"
         android:ems="10"
         android:hint="Descripcion:"
         android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@+id/etNombre"
+        app:layout_constraintEnd_toEndOf="@+id/etNombre"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnSave"
@@ -58,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:text="Guardar"
-        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/etDescripcion"
         app:layout_constraintTop_toBottomOf="@+id/etNombre" />

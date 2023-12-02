@@ -63,12 +63,12 @@ class RecetaAdaptador (
                 with(binding.root){
                     setOnClickListener { listener.onClick(receta) }
                     setOnLongClickListener {
-                        listener.onDeleteJugador(receta)
+                        listener.onDeleteReceta(receta)
                         true
                     }
                 }
                 binding.cbLiga.setOnClickListener {
-                    listener.onLigaJugador(receta)
+                    listener.onFavorite(receta)
                 }
             }
         }

@@ -44,8 +44,8 @@ class MainActivity : AppCompatActivity(), OnClickListenerReceta, OnClickListener
     private fun getRecetas() {
         val queue = LinkedBlockingQueue<MutableList<Receta>>()
         Thread{
-            val jugadores = RecetaApplication.database.RecetaDAO().getAllreceta()
-            queue.add(jugadores)
+            val Recetas = RecetaApplication.database.RecetaDAO().getAllreceta()
+            queue.add(Recetas)
         }.start()
         mAdaptadorReceta.setReceta(queue.take())
     }
@@ -55,7 +55,14 @@ class MainActivity : AppCompatActivity(), OnClickListenerReceta, OnClickListener
     }
 
     override fun onFavorite(receta: Receta) {
-        TODO("Not yet implemented")
+        receta.favorite = !receta.favorite
+        val queue = LinkedBlockingQueue<Receta>()
+        Thread{
+            RecetaApplication.database.RecetaDAO().updatereceta(receta)
+            queue.add(receta)
+
+        }.start()
+        mAdaptadorReceta.update(queue.take())
     }
 
     override fun onDeleteReceta(receta: Receta) {
