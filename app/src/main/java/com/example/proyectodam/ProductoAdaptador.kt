@@ -16,7 +16,7 @@ class ProductoAdaptador(private var productos: MutableList<Producto>,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         mContext = parent.context
 
-        val view = LayoutInflater.from(mContext).inflate(R.layout.activity_lista_producto, parent, false)
+        val view = LayoutInflater.from(mContext).inflate(R.layout.item_producto, parent, false)
         return ViewHolder(view)
     }
 
