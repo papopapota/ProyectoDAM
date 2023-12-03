@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="293dp"
@@ -36,6 +37,7 @@ lorem impsulorem impsulorem "
         app:layout_constraintTop_toBottomOf="@+id/imageView12"
         app:layout_constraintVertical_bias="0.0" />
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="409dp"
@@ -46,6 +48,7 @@ lorem impsulorem impsulorem "
         android:text="Refri Movil"
         android:textColor="@color/white"
         android:textSize="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -84,14 +87,63 @@ lorem impsulorem impsulorem "
         android:id="@+id/bottomNavegation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:menu="@menu/botton_navegation_menu"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nombre:"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/etDescripcion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.233"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/etDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginBottom="532dp"
+        android:ems="10"
+        android:hint="Descripcion:"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="@+id/etNombre"
+        app:layout_constraintEnd_toEndOf="@+id/etNombre"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/etNombre"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:text="Guardar"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/etDescripcion"
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etDescripcion"
+        tools:listitem="@layout/cv_receta"/>
+
 <FrameLayout
     android:id="@+id/hostFragment"
     android:layout_width="0dp"

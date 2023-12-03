@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">ProyectoDAM</string>
+
     <string name="profile_tittle">Perfil</string>
     <string name="refri_tittle">Refri</string>
     <string name="home_tittle">Inicio</string>
@@ -13,4 +14,7 @@
     <string name="producto" />
     <string name="salida" />
     <string name="Refri" />
+
+    <string name="description_img_photo">imagen del producto</string>
+
 </resources>

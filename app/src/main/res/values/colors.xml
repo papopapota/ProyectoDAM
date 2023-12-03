@@ -27,4 +27,6 @@
     <color name="gold">#DDDF2E</color>
 
     <color name="skygreen">#5EE951</color>
+    <color name="white_t">#99FFFFFF</color>
+    <color name="red">#99FF0000</color>
 </resources>
