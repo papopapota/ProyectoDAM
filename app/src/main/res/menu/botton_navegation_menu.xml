@@ -8,7 +8,6 @@ android:id="@+id/action_profile"
         app:showAsAction="never"
         android:icon="@drawable/user_icon"
         android:background="@drawable/box_button"
-        android:shadowColor="@color/gray"
 
     />
 
@@ -18,7 +17,7 @@ android:id="@+id/action_profile"
         app:showAsAction="never"
         android:icon="@drawable/refri_icon"
         android:background="@drawable/box_button"
-        android:shadowColor="@color/gray"
+
 
         />
     <item
@@ -27,7 +26,7 @@ android:id="@+id/action_profile"
         app:showAsAction="never"
         android:icon="@drawable/house_icon_asset"
         android:background="@drawable/box_button"
-        android:shadowColor="@color/gray"
+
         />
     <item
         android:id="@+id/action_compra"
@@ -35,7 +34,7 @@ android:id="@+id/action_profile"
         app:showAsAction="never"
         android:icon="@drawable/producto_icon"
         android:background="@drawable/box_button"
-        android:shadowColor="@color/gray"
+
 
         />
     <item
@@ -44,7 +43,7 @@ android:id="@+id/action_profile"
         app:showAsAction="never"
         android:icon="@drawable/salir_icon"
         android:background="@drawable/box_button"
-        android:shadowColor="@color/gray"
+
         />
 
 

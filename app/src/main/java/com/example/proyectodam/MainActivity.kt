@@ -50,7 +50,7 @@ setupBottomNavigation()
         fragmentManager.beginTransaction()
             .add(R.id.hostFragment, exit,Exit::class.java.name).hide(exit).commit()
 
-        mBinding.bottomNavegation {
+        mBinding.bottomNavegation.setOnNavigationItemReselectedListener{
             when(it.itemId){
                 R.id.action_profile -> {
                     mFragmetManager.beginTransaction().hide(mActiveFragment).show(perfil).commit()
