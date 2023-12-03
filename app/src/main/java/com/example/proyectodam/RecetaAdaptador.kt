@@ -29,11 +29,8 @@ class RecetaAdaptador (
                 binding.Nombre.text =receta.nombreReceta
                 binding.Descripcion.text=receta.descripcion
                 binding.cbLiga.isChecked=receta.favorite
-
             }
         }
-
-
         override fun getItemCount(): Int = recetas.size
         fun add(receta: Receta){
             recetas.add(receta)

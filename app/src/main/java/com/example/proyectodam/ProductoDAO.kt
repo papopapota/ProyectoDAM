@@ -8,15 +8,15 @@ import androidx.room.Update
 
 @Dao
 interface ProductoDAO {
-    @Query("Select name, price FROM producto")
-    fun getAllProducto():MutableList<Producto>
+    @Query("Select * FROM ProductoEntity")
+    fun getAllProductos():MutableList<ProductoEntity>
 
     @Insert
-    fun addProducto(producto: Producto)
+    fun addProducto(productoEntity: ProductoEntity)
 
     @Update
-    fun updateProducto(producto: Producto)
+    fun updateProducto(productoEntity: ProductoEntity)
 
     @Delete
-    fun deleteProducto(producto: Producto)
+    fun deleteProducto(productoEntity: ProductoEntity)
 }

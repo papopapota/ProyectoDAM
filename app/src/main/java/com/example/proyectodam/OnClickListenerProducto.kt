@@ -2,6 +2,8 @@ package com.example.proyectodam
 
 interface OnClickListenerProducto {
 
-    fun onClick (producto: Producto)
+    fun onClick (productoEntity: ProductoEntity)
+    fun onFavoriteProducto(productoEntity: ProductoEntity)
+    fun onDeleteProducto(productoEntity: ProductoEntity)
 
 }
